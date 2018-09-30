@@ -6,4 +6,23 @@
  * Time: 12:01 AM
  */
 
-echo "testdfdf";
+main::start();
+
+class main{
+    static public function start(){
+        echo "sucess!";
+    }
+
+}
+
+class csv{
+
+}
+
+class html{
+
+}
+
+class system{
+
+}
