@@ -48,7 +48,7 @@ class data{
             $this->createProperty($key,$value);
         }
     }
-    public function createProperty($key='name', $value='yash'){
+    public function createProperty($key, $value){
         $this->{$key} = $value;
     }
 }
