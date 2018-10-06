@@ -62,6 +62,23 @@ class dataFactory{
 
 class html{
     public static function makeTable($data){
-        echo $data;
+        $isHeader = true;
+        foreach ($data as $line){
+            if($isHeader){
+                self::makeHeader($line);
+                $isHeader = false;
+            }else{
+                self::makeRow($line);
+            }
+        }
+    }
+
+
+    public static function makeHeader($data){
+        print_r( $data);
+    }
+
+    public static function makeRow($data){
+        print_r( $data);
     }
 }
