@@ -22,23 +22,35 @@ class main{
 class processCsv{
     public static function readCSV($filename){
         $file = fopen($filename,"r");
+        $isKey = true;
 
-        while (!feof($file)){
-             fgetcsv($file);
-             $data[] = dataFactory::createData();
+        while(! feof($file)) {
+            $data = fgetcsv($file);
+
+            if($isKey){
+                $keys = $data;
+                $isKey = false;
+            }
+            $all[] = dataFactory::createData($data);
+
         }
-        print_r ($data);
+        fclose($file);
+
+        return $all;
     }
 
 }
 
 class data{
+    public function __construct(Array $data){
+
+    }
 
 }
 
 class dataFactory{
-    public static function createData(){
-        $data = new data();
+    public static function createData($data){
+        $data = new data($data);
 
         return $data;
     }
