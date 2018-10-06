@@ -9,11 +9,30 @@
  * Dynamincally read any CSV file and display it in a bootstrap table
  */
 
-main::startWith();
+main::startWith("example.csv");
 
 class main{
     public static function startWith($filename){
-        echo "sucess!";
+        processCsv::readCSV($filename);
 
     }
+}
+
+class processCsv{
+    public static function readCSV($filename){
+        $file = fopen($filename,"r");
+
+        while (!feof($file)){
+             print_r(fgetcsv($file));
+        }
+    }
+
+}
+
+class data{
+
+}
+
+class dataFactory{
+
 }
