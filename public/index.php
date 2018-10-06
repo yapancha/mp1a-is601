@@ -81,7 +81,7 @@ class html{
             $str.= "<th>".$val."</th>";
         }
         $str.= "</tr></thead>";
-        echo $str;
+        sys::printRow($str);
     }
 
     public static function makeRow($data){
@@ -90,7 +90,7 @@ class html{
             $str.= "<td>".$val."</td>";
         }
         $str .= "</tr>";
-        echo $str;
+        sys::printRow($str);
     }
 }
 
