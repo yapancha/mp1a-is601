@@ -14,8 +14,8 @@ main::startWith("example.csv");
 
 class main{
     public static function startWith($filename){
-        print_r(processCsv::readCSV($filename));
-
+        $data = processCsv::readCSV($filename);
+        html::makeTable($data);
     }
 }
 
@@ -38,7 +38,6 @@ class processCsv{
 
         return $all;
     }
-
 }
 
 class data{
@@ -58,5 +57,11 @@ class dataFactory{
 
         $data = new data($keys, $vals);
         return $data;
+    }
+}
+
+class html{
+    public static function makeTable($data){
+        echo $data;
     }
 }
