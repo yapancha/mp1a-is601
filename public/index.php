@@ -75,10 +75,14 @@ class html{
 
 
     public static function makeHeader($data){
-        print_r( $data);
+        foreach ($data as $val){
+            echo $val;
+        }
     }
 
     public static function makeRow($data){
-        print_r( $data);
+        foreach ($data as $val){
+            echo $val;
+        }
     }
 }
