@@ -1,28 +1,12 @@
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 <?php
 /**
- * Created by PhpStorm.
- * User: yp
- * Date: 9/30/18
- * Time: 12:01 AM
+ * Yash Panchal
+ * IS 601
+ * Mini project 1
+ * Dynamincally read any CSV file and display it in a bootstrap table
  */
 
-main::start();
-
-class main{
-    static public function start(){
-        echo "sucess!";
-    }
-
-}
-
-class csv{
-
-}
-
-class html{
-
-}
-
-class system{
-
-}
+echo "hi";
