@@ -14,7 +14,7 @@ main::startWith("example.csv");
 
 class main{
     public static function startWith($filename){
-        processCsv::readCSV($filename);
+        print_r(processCsv::readCSV($filename));
 
     }
 }
@@ -31,7 +31,7 @@ class processCsv{
                 $keys = $data;
                 $isKey = false;
             }
-            $all[] = dataFactory::createData($data);
+            $all[] = dataFactory::createData($keys,$data);
 
         }
         fclose($file);
@@ -42,16 +42,21 @@ class processCsv{
 }
 
 class data{
-    public function __construct(Array $data){
-
+    public function __construct(Array $keys=null, Array $vals = null){
+        $record = array_combine($keys,$vals);
+        foreach ($record as $key => $value){
+            $this->createProperty($key,$value);
+        }
     }
-
+    public function createProperty($key='name', $value='yash'){
+        $this->{$key} = $value;
+    }
 }
 
 class dataFactory{
-    public static function createData($data){
-        $data = new data($data);
+    public static function createData(Array $keys = null, Array $vals = null){
 
+        $data = new data($keys, $vals);
         return $data;
     }
 }
