@@ -79,6 +79,6 @@ class html{
     }
 
     public static function makeRow($data){
-        print_r($data);
+        print_r( $data);
     }
 }
