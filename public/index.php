@@ -9,4 +9,11 @@
  * Dynamincally read any CSV file and display it in a bootstrap table
  */
 
-echo "hi";
+main::startWith();
+
+class main{
+    public static function startWith($filename){
+        echo "sucess!";
+
+    }
+}
