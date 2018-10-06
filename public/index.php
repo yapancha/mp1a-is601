@@ -75,9 +75,14 @@ class html{
 
 
     public static function makeHeader($data){
+        $str = "<table class=\"table table-striped\"><thead><tr>";
+
         foreach ($data as $val){
-            echo $val;
+            $str.= "<th>".$val."</th>";
         }
+        $str.= "</tr></thead>";
+        echo $str;
+        //sys::printRow($str);
     }
 
     public static function makeRow($data){
