@@ -90,7 +90,7 @@ class html{
         foreach ($data as $val){
             $str.= "<td>".$val."</td>";
         }
-        $str .= "</tr>";
+        $str .= "</tr></tbody>";
         echo $str;
         //sys::printRow($str);
     }
