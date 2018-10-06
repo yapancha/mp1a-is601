@@ -95,5 +95,7 @@ class html{
 }
 
 class sys{
-
+    public static function printRow($str){
+        echo $str;
+    }
 }
